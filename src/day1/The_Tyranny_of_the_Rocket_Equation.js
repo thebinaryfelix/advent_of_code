@@ -21,7 +21,7 @@ const getFuelToLaunchRocket = data =>
     0
   )
 
-const getFuelToLaunchRocketWithMemoized = data => {
+const getFuelToLaunchRocketMemoized = data => {
   let totalFuel = 0
   const computedValues = {}
 
@@ -44,5 +44,5 @@ module.exports = {
   getFuelForAllModules,
   getTotalFuelPerMass,
   getFuelToLaunchRocket,
-  getFuelToLaunchRocketWithMemoized
+  getFuelToLaunchRocketMemoized
 }

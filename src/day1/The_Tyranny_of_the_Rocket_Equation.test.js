@@ -3,7 +3,7 @@ const {
   getFuelForAllModules,
   getTotalFuelPerMass,
   getFuelToLaunchRocket,
-  getFuelToLaunchRocketWithMemoized
+  getFuelToLaunchRocketMemoized
 } = require('./The_Tyranny_of_the_Rocket_Equation')
 
 const rocketModulesMock = [9, 12, 14, 1969, 100756]
@@ -42,11 +42,11 @@ describe('Should return the necessary fuel', () => {
       expect(getFuelToLaunchRocket(rocketModulesMock)).toBe(fuelSum)
     })
   })
-  describe('getFuelToLaunchRocketWithMemoized', () => {
+  describe('getFuelToLaunchRocketMemoized', () => {
     test('to launch the rocket', () => {
       const fuelSum = 1 + 2 + 2 + 966 + 50346
 
-      expect(getFuelToLaunchRocketWithMemoized(rocketModulesMock)).toBe(
+      expect(getFuelToLaunchRocketMemoized(rocketModulesMock)).toBe(
         fuelSum
       )
     })
